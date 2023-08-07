@@ -21,7 +21,7 @@ module.exports = {
     ['OpenIA', 80],
     ['Cloud', 75],
     ['Python', 80],
-    ['Análise vulnerabilidade', 100],
+    ['Vulnerability analysis', 100],
   ],
   positions: [
     {
@@ -33,7 +33,8 @@ module.exports = {
       - Pentesting on Web Applications
       - Implementation of Security Policies following guidelines from CMN, Bacen, CVM, NIST, and ISO 27K
       - Monitoring, auditing, and assessing the maturity of information security processes
-      - Analysis and mitigation of risks and vulnerabilities in cyber security systems, applications, processes, and infrastructures.
+      - Analysis and mitigation of risks and vulnerabilities in cyber security systems, applications, processes, 
+      and infrastructures.
 `
     },
     {
@@ -53,10 +54,11 @@ module.exports = {
       period: 'April de 2018 – July de 2021',
       skills: ['Data Analysis', 'Python', 'Geoprocessing'],
       contents: `
-      Data processing using Python and elaboration of technical reports for clients, with automation methods implemented using 
-      the language for document creation. Libraries utilized include Numpy, Pandas, Matplotlib, Cartopy, Seaborn, gsw, pylab, and 
-      pycircstat. Maintenance, testing, and development of electronic equipment procedures tailored to the field of oceanography.
-            Acquisition of data through watercraft, conducting data surveys, and installation of tide gauges.
+      Data processing using Python and elaboration of technical reports for clients, with automation methods
+      implemented using       the language for document creation. Libraries utilized include Numpy, Pandas, 
+      Matplotlib, Cartopy, Seaborn, gsw, pylab, and pycircstat. Maintenance, testing, and development of electronic 
+      equipment procedures tailored to the field of oceanography. Acquisition of data through watercraft, conducting 
+      data surveys, and installation of tide gauges.
 `
    },
    {
@@ -64,8 +66,8 @@ module.exports = {
     period: 'February de 2016 – December de 2016',
     skills: ['Environmental Education', 'Cash Control', ' Accounting'],
     contents: `
-    Managing cash flow, preparing informative reports, conducting strategic planning, and supervising advisors in the distribution 
-    of tasks.`
+    Managing cash flow, preparing informative reports, conducting strategic planning, and supervising advisors in the 
+    distribution of tasks.`
   }
   ],
 
