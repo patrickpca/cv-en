@@ -1,10 +1,11 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ name }}. {{ title }}</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -13,108 +14,184 @@
     <link rel="stylesheet" href="styles.css">
     <base target="_blank">
 </head>
+
 <body>
-<div class="container page">
-    <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-        <div class="row">
-            <div class="col-print-6 col-12 col-md-4 d-flex justify-content-between flex-column">
-                <div>
-                    <h1 class="mb-0">{{ name }}</h1>
-                    <div class="fs-3">{{ title }}</div>
+    <div class="container page">
+        <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
+            <div class="row">
+                <div class="col-print-6 col-12 col-md-4 d-flex justify-content-between flex-column">
+                    <div>
+                        <h1 class="mb-0">{{ name }}</h1>
+                        <div class="fs-3">{{ title }}</div>
+                    </div>
+                    <div>
+                        <p>
+                            <time datetime="{{ buildinfo.date }}" class="small">Last update: {{ updated }}</time>
+                        </p>
+                        <p>
+                            <span class="screen"><a href="{{ pdfFileName }}"><i class="far fa-file-pdf"></i>Download PDF
+                                    version</a></span>
+                            <span class="print">Up-to-date version of CV is available at <a href="{{ baseUrl }}"
+                                    class="text-nowrap"><i class="fab fa-github" aria-hidden="true"></i>{{ baseUrl
+                                    }}</a></span>
+                        </p>
+                    </div>
                 </div>
-                <div>
+                <div class="col-4 col-md-3 col-lg-2 offset-lg-1 d-none d-md-block align-md-self-center text-center">
+                    <img src="photo.jpg" class="rounded-circle img-fluid" alt="Personal photo">
+                </div>
+                <div class="col-print-6 col-12 col-md-5 offset-lg-1 col-lg-4">
+                    <ul class="list-group list-group-flush">
+                        {{#each facts}}
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <span class="text-nowrap">{{ @key }}</span>
+                            <span class="text-nowrap">{{{ this }}}</span>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
+            <h2 class="mb-4">Resume</h2>
+            Graduated in Cyber Defense from FIAP, I possess extensive experience in the security field. 
+            I am highly proficient in conducting offensive security tests (both infrastructure and web) and carrying out vulnerability 
+            analyses. My expertise extends to employing intrusion techniques, conducting risk analyses, and preparing comprehensive 
+            reports on vulnerabilities and their respective mitigations. Moreover, I have successfully delivered projects focused on 
+            incident response implementation and threat intelligence. My professional background includes assessing cyber maturity 
+            across various frameworks (LGPD, ISF, NIST, and CIS) and performing audits to ensure compliance with cybersecurity 
+            regulations such as SUSEP, BACEN, and standards like ISO 27K. In addition to my technical skills, I am adept at data 
+            analysis and processing using Python, leveraging Data Science libraries in the Anaconda package. Before transitioning into
+            the cyber realm, I had a solid foundation in Oceanography, which enabled me to excel in preparing technical reports. 
+            As a project coordinator, I have proven my ability to deliver and present well-qualified data with precision.
+            
+        </div>
+
+        <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
+            <h2 class="mb-4">Professional Experience</h2>
+            {{#each positions}}
+            <div class="row d-block d-md-flex{{#unless @last}} mb-5{{/unless}}">
+                <div class="col-md-2 pt-1">
+                    {{ period }}
+                </div>
+                <div class="col-md-10">
+                    <h3 class="fs-4 fw-normal">{{ title }}</h3>
+
+                    <div>{{{markdown contents }}}</div>
+
                     <p>
-                        <time datetime="{{ buildinfo.date }}" class="small">Last update: {{ updated }}</time>
-                    </p>
-                    <p>
-                        <span class="screen"><a href="{{ pdfFileName }}"><i class="far fa-file-pdf"></i>Download PDF version</a></span>
-                        <span class="print">Up-to-date version of CV is available at <a href="{{ baseUrl }}"
-                                                                                        class="text-nowrap"><i
-                            class="fab fa-github" aria-hidden="true"></i>{{ baseUrl }}</a></span>
+                        {{#each skills }}
+                        <span class="badge text-body border border-1">{{ this }}</span>
+                        {{/each}}
                     </p>
                 </div>
             </div>
-            <div class="col-4 col-md-3 col-lg-2 offset-lg-1 d-none d-md-block align-md-self-center text-center">
-                <img src="photo.jpg" class="rounded-circle img-fluid" alt="Personal photo">
-            </div>
-            <div class="col-print-6 col-12 col-md-5 offset-lg-1 col-lg-4">
-                <ul class="list-group list-group-flush">
-                    {{#each facts}}
-                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                        <span class="text-nowrap">{{ @key }}</span>
-                        <span class="text-nowrap">{{{ this }}}</span>
+            {{/each}}
+        </div>
+
+        <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
+            <h2 class="mb-4">Formação</h2>
+            <div>Cyber Defense - Faculty of Informatics and Administration Paulista - FIAP [2022]</div>
+            <div>Bachelor's in Oceanography - Federal University of Espírito Santo - UFES [2018]</div>
+        </div>
+
+        <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
+            <h2 class="mb-4">certifications</h2>
+            <div> 
+                <ul>
+                    <li>
+                        <a href="https://desecsecurity.com/curso/novo-pentest-profissional">New Professional Pentester and Pentester Experience - DESEC
+                    </a></li>
+                    <li>
+                        <a href="https://hotmart.com/pt-br/marketplace/produtos/curso-de-inteligencia-cibernetica-com-vinicius-vieira/J81793434W"> OPSEC - Cyber Intelligence in Practice - Vinicius Vieira</a>
                     </li>
-                    {{/each}}
+                    <li>
+                        <a href="https://tryhackme.com/path/outline/beginner">Complete Beginner Learning Path- TryHackMe</a>
+                    </li>
+                    <li>
+                        <a href="https://www.alura.com.br/formacao-owasp">OWASP - Application Security Verification Standard and Top Ten - Alura</a>
+                    </li>
+                    <li>
+                        <a href="https://www.fiap.com.br/graduacao/tecnologo/defesa-cibernetica/">Professional Qualification Certificate in Cybersecurity - FIAP</a>
+                    </li>
+                    <li>
+                        <a href="https://www.fiap.com.br/graduacao/tecnologo/defesa-cibernetica/">Professional Qualification Certificate in Information Security Management - FIAP</a>
+                    </li>
+                    <li>
+                        <a href="https://desecsecurity.com/curso/introducao-pentest">The New Generation in Professional Pentesting - DeSec</a>
+                    </li>
+                    <li>
+                        <a href="https://www.netacad.com/courses/cybersecurity/introduction-cybersecurity">Introduction to Cybersecurity - CISCO</a>
+                    </li>
+
                 </ul>
             </div>
+            
         </div>
-    </div>
 
-    <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-        <h3 class="h2 screen mb-4">Skills</h3>
-        <div class="row align-items-center">
-            {{#each skills}}
-            <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
-                <small>{{ this.[0] }}</small>
-            </div>
-            <div class="col-print-1 col-3 col-md-2 col-lg-1">
-                <div class="skills">
-                    <div class="skills-bar" style="width: {{ this.[1] }}%"></div>
+        <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
+            <h2 class="mb-4">volunteer experience</h2>
+            {{#each positions2}}
+            <div class="row d-block d-md-flex{{#unless @last}} mb-5{{/unless}}">
+                <div class="col-md-2 pt-1">
+                    {{ period }}
+                </div>
+                <div class="col-md-10">
+                    <h3 class="fs-4 fw-normal">{{ title }}</h3>
+
+                    <div>{{{markdown contents }}}</div>
+
+                    <p>
+                        {{#each skills }}
+                        <span class="badge text-body border border-1">{{ this }}</span>
+                        {{/each}}
+                    </p>
                 </div>
             </div>
             {{/each}}
         </div>
-    </div>
 
-    <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-        English poet, playwright and actor, widely regarded as the greatest writer in the English language
-        and the world's pre-eminent dramatist. Often called England's national poet and the "Bard of Avon".
-        My extant work is including collaborations, consist of approximately 38 plays, 154 sonnets,
-        two long narrative poems and a few other verses, some of uncertain authorship.
-    </div>
 
-    <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-        <h2 class="mb-4">Professional Experience</h2>
-        {{#each positions}}
-        <div class="row d-block d-md-flex{{#unless @last}} mb-5{{/unless}}">
-            <div class="col-md-2 pt-1">
-                {{ period }}
+
+        <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
+            <h3 class="h2 screen mb-4">Skills</h3>
+            <div class="row align-items-center">
+                {{#each skills}}
+                <div class="col-print-1 col-3 col-md-2 col-lg-1 text-right">
+                    <small>{{ this.[0] }}</small>
+                </div>
+                <div class="col-print-1 col-3 col-md-2 col-lg-1">
+                    <div class="skills">
+                        <div class="skills-bar" style="width: {{ this.[1] }}%"></div>
+                    </div>
+                </div>
+                {{/each}}
             </div>
-            <div class="col-md-10">
-                <h3 class="fs-4 fw-normal">{{ title }}</h3>
+        </div>
 
-                <div>{{{markdown contents }}}</div>
+        <h2 class="mb-4">Additional Experience</h2>
 
-                <p>
-                    {{#each skills }}
-                    <span class="badge text-body border border-1">{{ this }}</span>
-                    {{/each}}
-                </p>
+        {{#each experience}}
+        <div class="mb-4">
+            <h3 class="fs-4 fw-normal">{{ header }}</h3>
+
+            {{{markdown contents }}}
+
+            <div>
+                {{#each skills }}
+                <span class="badge text-body border border-1">{{ this }}</span>
+                {{/each}}
             </div>
+                          
         </div>
         {{/each}}
+    
+
+        
     </div>
-
-    <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-        <h2 class="mb-4">Education</h2>
-        <div>King Edward VI Grammar School in Stratford-upon-Avon [1571 - 1578]</div>
-    </div>
-
-    <h2 class="mb-4">Additional Experience</h2>
-
-    {{#each experience}}
-    <div class="mb-4">
-        <h3 class="fs-4 fw-normal">{{ header }}</h3>
-
-        {{{markdown contents }}}
-
-        <div>
-            {{#each skills }}
-            <span class="badge text-body border border-1">{{ this }}</span>
-            {{/each}}
-        </div>
-    </div>
-    {{/each}}
-</div>
 </body>
+
 </html>

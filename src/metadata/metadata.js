@@ -1,68 +1,123 @@
 module.exports = {
-  name: 'William Shakespeare',
-  title: 'Poet, playwright and actor',
+  name: 'Patrick Coser',
+  title: 'CyberSecurity || Pentester || AppSec',
   facts: {
-    'Residence': '<a href="https://www.google.com/maps/place/London,+UK/@51.5285582,-0.2416814,11z/data=!3m1!4b1!4m5!3m4!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5072178!4d-0.1275862"><i class="fa fa-home fact-icon"></i>London</a>',
-    'Wiki': `<a href="https://en.wikipedia.org/wiki/William_Shakespeare">
-                  <i class="fa-brands fa-wikipedia-w fact-icon"></i>William_Shakespeare
+    'Local': '<a href="https://www.google.com/maps/d/embed?mid=1njMqPYaeTpLPTg1FGom0BoJJA3o&hl=en&ehbc=2E312F" width="640" height="480"><i class="fa fa-home fact-icon"></i>Espirito Santo</a>',
+    'Linkedin': `<a href="https://www.linkedin.com/in/patrick-coser/">
+                  <i class="fab fa-linkedin-in"></i>Patrick-Coser
                 </a>`,
-    'Twitter': `<a href="https://twitter.com/shakespeare"><i class="fa-brands fa-twitter fact-icon"></i>Shakespeare</a>`,
-    'Email': '<a href="mailto:wil64@yahoo.com"><i class="fa fa-envelope fact-icon"></i>wil64@yahoo.com</a>'
+    'Github': `<a href="https://github.com/patrickpca"><i class="fa-brands fa-github"></i>Patrickpca</a>`,
+    'Email': '<a href="patrickpcaa@gmail.com"><i class="fa fa-envelope fact-icon"></i>patrickpcaa@gmail.com</a>'
   },
   skills: [
-    ['Comedy', 100],
-    ['Love', 100],
-    ['Theater', 100],
-    ['Tragedy', 100],
-    ['Poetry', 100],
-    ['Erotic', 75],
-    ['Sonnets', 100],
-    ['Plays', 100],
-    ['Writing', 100],
-    ['Directing', 75],
-    ['Literature', 100],
-    ['Influence', 100],
+    ['Hacking', 100],
+    ['OSINT', 100],
+    ['Pentest', 100],
+    ['BACEN', 85],
+    ['Data Analysis', 75],
+    ['COBIT', 75],
+    ['SQL', 80],
+    ['GitHub', 75],
+    ['OpenIA', 80],
+    ['Cloud', 75],
+    ['Python', 80],
+    ['Análise vulnerabilidade', 100],
   ],
   positions: [
     {
-      title: 'Hamlet',
-      period: 'Likely early 17th century',
-      skills: ['tragedy', 'philosophy', 'death'],
+      title: 'Mazars',
+      period: 'November de 2022 – Now',
+      skills: ['Pentest', 'Audit', 'Vulnerability Assessment'],
       contents: `
-Prince Hamlet is visited by his father's ghost and ordered to avenge his father's murder by killing King Claudius, his uncle. After struggling with several questions, including whether what the ghost said is true and whether it is right for him to take revenge, Hamlet, along with almost all the other major characters, is killed.
+      - Internal and External Pentesting
+      - Pentesting on Web Applications
+      - Implementation of Security Policies following guidelines from CMN, Bacen, CVM, NIST, and ISO 27K
+      - Monitoring, auditing, and assessing the maturity of information security processes
+      - Analysis and mitigation of risks and vulnerabilities in cyber security systems, applications, processes, and infrastructures.
 `
     },
     {
-      title: 'Twelfth Night',
-      period: '1600 – 1601',
-      skills: ['comedy', 'love'],
+      title: 'Pentester Freelancer',
+      period: 'February de 2022 – Now',
+      skills: ['Pentest ', 'Vulnerability Assessment'],
       contents: `
-Viola finds herself shipwrecked in Illyria and, assuming that her brother Sebastian has died in the wreck, disguises herself as a man to gain a position in Duke Orsino's court. Orsino sends Viola (whom he knows as Cesario) to deliver a message to his love, Olivia. Olivia, however, dislikes the Duke. She falls in love with Viola, who she thinks is a man. Eventually, Viola's brother Sebastian, who in fact was unharmed in the wreck, reappears. At a critical moment, Viola's true identity is revealed when members of the court notice the similarities between her and Sebastian. Olivia quickly falls in love with Sebastian, and Viola confesses her love for the Duke.
+- External Pentest
+- Internal Pentest
+- Web Pentest
+- security analysis
 `
     },
+    
     {
-      title: 'The Tragedy of Romeo and Juliet',
-      period: '1595–1596, with a possible early draft written in 1591',
-      skills: ['tragedy', 'death', 'love'],
+      title: 'EGS Brasil',
+      period: 'April de 2018 – July de 2021',
+      skills: ['Data Analysis', 'Python', 'Geoprocessing'],
       contents: `
-In Verona, Italy, two families, the Montagues and the Capulets, are in the midst of a bloody feud. Romeo, a Montague, and Juliet, a Capulet, fall in love and struggle to maintain their relationship in the face of familial hatred. After Romeo kills Juliet's cousin Tybalt in a fit of passion, things fall apart. Both lovers eventually commit suicide within minutes of each other, and the feuding families make peace over their recent grief.
+      Data processing using Python and elaboration of technical reports for clients, with automation methods implemented using 
+      the language for document creation. Libraries utilized include Numpy, Pandas, Matplotlib, Cartopy, Seaborn, gsw, pylab, and 
+      pycircstat. Maintenance, testing, and development of electronic equipment procedures tailored to the field of oceanography.
+            Acquisition of data through watercraft, conducting data surveys, and installation of tide gauges.
 `
-    }
+   },
+   {
+    title: 'Ecoceano - Junior Consulting Company in Oceanography and Environmental Education',
+    period: 'February de 2016 – December de 2016',
+    skills: ['Environmental Education', 'Cash Control', ' Accounting'],
+    contents: `
+    Managing cash flow, preparing informative reports, conducting strategic planning, and supervising advisors in the distribution 
+    of tasks.`
+  }
   ],
+
+
+  positions2: [
+    {
+      title: 'Enygma',
+      period: 'April de 2022 – June de 2022',
+      skills: ['SOC', 'Fortinet'],
+      contents: `
+      Fortinet:
+      Log analysis;
+      Risk identification;
+      Vulnerability report analysis.
+`
+    },
+    
+   {
+    title: 'Na Onda do Futuro (Riding the Wave of the Future)',
+    period: 'March de 2016 – December de 2016',
+    skills: ['Environmental Education'],
+    contents: `
+    Development of classroom activities focused on environmental education for children.`
+  }
+  ],
+
+
+
+
+
   experience: [
     {
-      header: 'Performance',
-      skills: ['theater', 'play'],
+      header: 'Pentest',
+      skills: ['Kali Linux', 'Burp Suite','Metasploit','PowerSploit','Inveigh','Owasp Amass','Dehashed','Nmap', 'Nessus','Breach-Parsed','Shodan','GitLab','GitHub','AWS','Azure','Customização de scripts em Bash, PHP, SQL, Python, C, Perl, Ruby, PowerShell'],
       contents: `
-Thousands of performances of my plays have been staged since the end of the 16th century. Many of my greatest plays were performed by the Lord Chamberlain's Men and King's Men acting companies at the [Globe](https://en.wikipedia.org/wiki/Globe_Theatre) and Blackfriars Theatres.
-`
+      Internal and External Pentesting; Web application pentest; Vulnerability analysis.
+      `
     },
     {
-      header: 'Poetry',
-      skills: ['poetry', 'erotic'],
+      header: 'Auditor/Consultant',
+      skills: ['COBIT','National Institute of Standards (NIST)','International Organization for Standardization (ISO 27K)','Information Security Forum (ISF)','Standard of Good Practice for Information Security (SOGP)','Committee of Sponsoring Organizations of the Treadway Commission (COSO II)'],
       contents: `
-In 1593 and 1594, when the theatres were closed because of plague, I published two narrative poems on sexual themes, Venus and Adonis and The Rape of Lucrece. I dedicated them to Henry Wriothesley, Earl of Southampton.
-`
+      Implementation of security policies, risk analysis and mitigation, and flow mapping.
+      `
+    },
+    {
+      header: 'Data Science',
+      skills: ['Anaconda','Github','Python','PHP','Matlab','ArcGis','Qgis','Autocad'],
+      contents: `
+      Data analysis; Data qualification; Creation of data processing workflows; Automation of data processing.
+      `
     }
   ]
+
 };
