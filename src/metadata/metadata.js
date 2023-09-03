@@ -35,6 +35,7 @@ module.exports = {
       - Monitoring, auditing, and assessing the maturity of information security processes
       - Analysis and mitigation of risks and vulnerabilities in cyber security systems, applications, processes, 
       and infrastructures.
+      - SOC implementation and operation using SentinelOne.
 `
     },
     {
