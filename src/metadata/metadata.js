@@ -30,7 +30,7 @@ module.exports = {
     {
       title: 'Freelance - DataProcessor',
       period: 'October 2023 – Now',
-      skills: ['Qimera', 'AutoClean', 'Eiva', 'QGis', 'FMGeocoder', 'Python', 'GlobalMapper'],
+      skills: ['Qimera', 'AutoClean', 'Eiva','NaviEdit','NaviModel', 'QGis', 'FMGT', 'Python', 'GlobalMapper'],
       contents: `
       - Qimera Operation for Bathymetric Data: Efficient use of Qimera software for processing and analyzing depth 
       data
