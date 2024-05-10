@@ -172,7 +172,7 @@
                 {{/each}}
             </div>
         </div>
-
+<!-- 
         <h2 class="mb-4">Projects</h2>
 
         {{#each experience}}
@@ -188,9 +188,37 @@
             </div>
                           
         </div>
-        {{/each}}
-    
+        {{/each}} -->
 
+        <h2 class="mb-4">Projects</h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Client</th>
+              <th>Project</th>
+              <th>Vessel</th>
+              <th>Software</th>
+              <th>Designation</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each experience}}
+            <tr>
+              <td>{{ date }}</td>
+              <td>{{ client }}</td>
+              <td>{{ projectTitle }}</td>
+              <td>{{ vessel }}</td>
+              <td>{{#each software }}
+                <span class="badge text-body border border-1">{{ this }}</span>
+                {{/each}}</td>
+              <td>{{ designation }}</td>
+            </tr>
+            {{/each}}
+          </tbody>
+        </table>
+        
         
     </div>
 </body>
