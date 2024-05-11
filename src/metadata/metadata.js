@@ -148,11 +148,19 @@ module.exports = {
       designation: 'Senior Geoscience Technician II',
     },
     {
-      date: 'Apr/2019 - Jun/2019',
+      date: 'Ago/2019 - Dez/2019',
       client: 'Alcatel Submarine Network - ASN',
-      projectTitle: 'Cable route survey in Rio de Janeiro and Santos - Brasil',
+      projectTitle: 'Malbec Submarine Cable - Cable route survey in Rio de Janeiro and Santos - Brasil',
       vessel: '-',
       software: ['Hypack','Echart','Scanline','HOBOware','Geosuite Acquisiton','Edgetech Discover','Sonardyne Ranger','Valeport Datalog','Sonarwiz','Qinsy','Qimera'],
+      designation: 'Hydrography Technical Assistant III',
+    }, 
+    {
+      date: 'May/2019 - Jul/2019',
+      client: 'TE SubCom',
+      projectTitle: 'South Pacific Subsea Cable system ',
+      vessel: '-',
+      software: ['Hypack','Python','QGIS','Qimera','Global Mapper'],
       designation: 'Hydrography Technical Assistant III',
     },   
     {
