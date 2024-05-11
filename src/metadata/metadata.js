@@ -127,7 +127,7 @@ module.exports = {
       date: 'May/2021 - Jun/2021',
       client: 'Rede Nacional de Ensino e Pesquisa (RNP)',
       projectTitle: 'Programa Amazônia Integrada Sustentável (PAIS)',
-      vessel: '-',
+      vessel: 'Maruaga',
       software: ['Python','SeatermV2','Ruskin','ITER SYSTEMS BathySwath echosounder','SBG SYSTEMS Ellipse 2 MRU','Teledyne DMS-05 MRU'],
       designation: 'Senior Geoscience Technician',
     },
