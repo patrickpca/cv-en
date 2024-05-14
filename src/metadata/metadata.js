@@ -32,14 +32,10 @@ module.exports = {
       period: 'October 2021 – Now',
       skills: ['Qimera', 'AutoClean', 'Eiva','NaviEdit','NaviModel', 'QGis', 'FMGT', 'Python', 'GlobalMapper'],
       contents: `
-      - Qimera Operation for Bathymetric Data: Efficient use of Qimera software for processing and analyzing depth 
-      data
-      - Optimization with AutoClean and qimera: Application of automatic filters to enhance the quality of 
-      bathymetric data
-      - Data Management with EIVA: Strategies for effective management of large volumes of bathymetric data using 
-      EIVA
-      - Multisource Data Integration: Combining bathymetric data with other geospatial data sources for 
-      comprehensive analysis
+      MBES processing through the softwares: QPS Qimera and FMGT, EIVA NaviEdit and Navimodel, Beamworx AutoClean
+      and AutoPatch. Data validation, calibration, backscatter, quality control, deliverables production. 
+      Multisource Data Integration: Combining bathymetric data with other geospatial data sources and phyton 
+      for comprehensive analysis.
 `
     },
     
