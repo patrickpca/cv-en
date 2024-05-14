@@ -32,9 +32,10 @@ module.exports = {
       period: 'October 2021 – Now',
       skills: ['Qimera', 'AutoClean', 'Eiva','NaviEdit','NaviModel', 'QGis', 'FMGT', 'Python', 'GlobalMapper'],
       contents: `
-      MBES processing through the softwares: QPS Qimera and FMGT, EIVA NaviEdit and Navimodel, Beamworx AutoClean
+      - MBES processing through the softwares: QPS Qimera and FMGT, EIVA NaviEdit and Navimodel, Beamworx AutoClean
       and AutoPatch. Data validation, calibration, backscatter, quality control, deliverables production. 
-      Multisource Data Integration: Combining bathymetric data with other geospatial data sources and phyton 
+      
+      - Multisource Data Integration: Combining bathymetric data with other geospatial data sources and phyton 
       for comprehensive analysis.
 `
     },
