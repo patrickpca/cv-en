@@ -10,12 +10,11 @@ module.exports = {
     'Email': '<a href="patrickpcaa@gmail.com"><i class="fa fa-envelope fact-icon"></i>patrickpcaa@gmail.com</a>'
   },
   skills: [
-    ['Team Work', 100],
     ['Flexibity', 100],
     ['Data Analysis', 100],
-    ['Linux', 100],
     ['Python', 100],
     ['Qimera', 90],
+    ['AutoClean', 90]
     ['FMGT', 85],
     ['ArcGis', 85],
     ['QGis', 85],
@@ -24,6 +23,7 @@ module.exports = {
     ['GlobalMapper', 75],
     ['AutoCad', 60],
     ['CARIS', 60],
+    ['Linux', 100],
     ],
   positions: [
        
@@ -106,7 +106,7 @@ module.exports = {
   experience: [
     
     {
-      date: 'May/2024 - Jun/2024',
+      date: 'May/2024 - Jul/2024',
       client: 'PowerLink - GEM',
       projectTitle: 'Neuconnect',
       vessel: 'Mintis',
