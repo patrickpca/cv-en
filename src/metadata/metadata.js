@@ -14,7 +14,7 @@ module.exports = {
     ['Data Analysis', 100],
     ['Python', 100],
     ['Qimera', 90],
-    ['AutoClean', 90]
+    ['AutoClean', 90],
     ['FMGT', 85],
     ['ArcGis', 85],
     ['QGis', 85],
@@ -106,7 +106,7 @@ module.exports = {
   experience: [
     
     {
-      date: 'May/2024 - Jul/2024',
+      date: 'May/2024 - Aug/2024',
       client: 'PowerLink - GEM',
       projectTitle: 'Neuconnect',
       vessel: 'Mintis',
