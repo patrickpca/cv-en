@@ -154,7 +154,7 @@ module.exports = {
       designation: 'Senior Geoscience Technician II',
     },
     {
-      date: 'Ago/2019 - Dez/2019',
+      date: 'Aug/2019 - Dez/2019',
       client: 'Alcatel Submarine Network - ASN',
       projectTitle: 'Malbec Submarine Cable - Cable route survey in Rio de Janeiro and Santos - Brasil',
       vessel: 'opportunity Vessel',
@@ -170,7 +170,7 @@ module.exports = {
       designation: 'Hydrography Technical Assistant III',
     },   
     {
-      date: 'Ago/2018 - Jan/2019',
+      date: 'Aug/2018 - Jan/2019',
       client: 'Rede Nacional de Ensino e Pesquisa (RNP)',
       projectTitle: 'Hydrographic and Geophysical Survey - Grande do Norte and Fernando de Noronha Archipelago (PE)',
       vessel: 'opportunity Vessel - Gaivota',
