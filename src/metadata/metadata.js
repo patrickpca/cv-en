@@ -15,12 +15,12 @@ module.exports = {
     ['Python', 100],
     ['Qimera', 90],
     ['AutoClean', 90],
+    ['QGis', 90],
+    ['GlobalMapper', 85],
     ['FMGT', 85],
     ['ArcGis', 85],
-    ['QGis', 85],
-    ['EIVA', 80],
+    ['EIVA', 70],
     ['Hypack', 75],
-    ['GlobalMapper', 75],
     ['AutoCad', 60],
     ['CARIS', 60],
     ['Linux', 100],
@@ -42,7 +42,7 @@ module.exports = {
     
     {
       title: 'Mazars',
-      period: 'November 2022 – Now',
+      period: 'November 2022 – May 2024',
       skills: ['Pentest', 'Audit', 'Vulnerability Assessment'],
       contents: `
       - Internal and External Pentesting
@@ -105,6 +105,14 @@ module.exports = {
 
   experience: [
     
+    {
+      date: 'Aug/2024 - Now',
+      client: 'RTE - GeoXYZ',
+      projectTitle: 'RTE Off Coast Atlantic',
+      vessel: 'MinervaUno / Geo Ocean XXII',
+      software: ['Qimera','AutoClean', 'QGis', 'GlobalMapper','Python'],
+      designation: 'MBES Data Processor - Remote',
+    },
     {
       date: 'May/2024 - Aug/2024',
       client: 'PowerLink - GEM',
