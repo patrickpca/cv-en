@@ -106,7 +106,7 @@ module.exports = {
   experience: [
     
     {
-      date: 'Aug/2024 - Now',
+      date: 'Aug/2024 - Out/2024',
       client: 'RTE - GeoXYZ',
       projectTitle: 'RTE Off Coast Atlantic',
       vessel: 'MinervaUno / Geo Ocean XXII',
