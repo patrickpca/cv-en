@@ -10,9 +10,9 @@ module.exports = {
     'Email': '<a href="patrickpcaa@gmail.com"><i class="fa fa-envelope fact-icon"></i>patrickpcaa@gmail.com</a>'
   },
   skills: [
-    ['Flexibity', 100],
     ['Data Analysis', 100],
     ['Python', 100],
+    ['Linux', 100],
     ['Qimera', 90],
     ['AutoClean', 90],
     ['QGis', 90],
@@ -20,11 +20,11 @@ module.exports = {
     ['FMGT', 85],
     ['ArcGis', 85],
     ['EIVA', 70],
-    ['Hypack', 75],
+    ['SonarWiz',70],
+    ['Hypack', 70],
     ['AutoCad', 60],
-    ['CARIS', 60],
-    ['Linux', 100],
     ],
+
   positions: [
        
     {
