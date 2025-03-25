@@ -105,6 +105,15 @@ module.exports = {
 
   experience: [
     
+
+    {
+      date: 'Mar/2025 - Apr/2025',
+      client: 'RTE - GeoXYZ',
+      projectTitle: 'RTE Atlantic Coast',
+      vessel: 'Geo Ocean XVIII',
+      software: ['Qimera','AutoClean', 'QGis', 'GlobalMapper','Python'],
+      designation: 'MBES Data Processor - France',
+    },
     {
       date: 'Aug/2024 - Out/2024',
       client: 'RTE - GeoXYZ',
