@@ -105,14 +105,21 @@ module.exports = {
 
   experience: [
     
-
+    {
+      date: 'Apr/2025',
+      client: 'AF Offshore Decom - GeoXYZ',
+      projectTitle: 'Subsea Survey for Removal 2025',
+      vessel: 'Geo Ocean III',
+      software: ['Qimera','AutoClean', 'QGis', 'GlobalMapper','Python'],
+      designation: 'MBES Data Processor - Remote',
+    },
     {
       date: 'Mar/2025 - Apr/2025',
       client: 'RTE - GeoXYZ',
       projectTitle: 'RTE Atlantic Coast',
       vessel: 'Geo Ocean XVIII',
       software: ['Qimera','AutoClean', 'QGis', 'GlobalMapper','Python'],
-      designation: 'MBES Data Processor - France',
+      designation: 'MBES Data Processor - Offshore: France',
     },
     {
       date: 'Aug/2024 - Out/2024',
