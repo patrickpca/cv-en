@@ -105,6 +105,15 @@ module.exports = {
 
   experience: [
     
+
+    {
+      date: 'Jun/2025',
+      client: 'Orsted - GeoXYZ',
+      projectTitle: 'HOW1 & HOW2 Post Construction Survey 2025',
+      vessel: 'Geo Ocean VIII',
+      software: ['Qimera','AutoClean', 'QGis', 'GlobalMapper','Python'],
+      designation: 'MBES Data Processor - Offshore: UK',
+    },
     {
       date: 'Apr/2025',
       client: 'AF Offshore Decom - GeoXYZ',
