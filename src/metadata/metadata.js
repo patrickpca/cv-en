@@ -107,6 +107,15 @@ module.exports = {
     
 
     {
+      date: 'Ago/2025',
+      client: 'TotalEnergies - GeoXYZ',
+      projectTitle: 'Offshore UXO Geophysical Site Investigation NSEs',
+      vessel: 'Geo Ocean VIII',
+      software: ['Qimera','AutoClean', 'QGis', 'GlobalMapper','Python'],
+      designation: 'MBES Data Processor - Offshore: Germany',
+    },
+    
+    {
       date: 'Jun/2025',
       client: 'Orsted - GeoXYZ',
       projectTitle: 'HOW1 & HOW2 Post Construction Survey 2025',
@@ -154,6 +163,16 @@ module.exports = {
       software: ['Qimera','AutoClean', 'FMGT', 'QGis', 'GlobalMapper','Python'],
       designation: 'MBES Data Processor - Remote',
     },
+
+    {
+      date: '2022 - 2024',
+      client: 'Mazars & Cyber Freelance ',
+      projectTitle: 'Pentest, programing, audit TI, Cyber Security',
+      vessel: 'N/A',
+      software: ['PowerShell','Linux', 'Firewall','Python'],
+      designation: 'Cyber Security',
+    },
+
     {
       date: 'Jul/2019 - Mar/2021',
       client: 'IBAMA',
