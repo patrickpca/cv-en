@@ -107,6 +107,15 @@ module.exports = {
     
 
     {
+      date: 'Dec/2025 - Jan/2026',
+      client: 'Rheinmetall UXO - GeoXYZ',
+      projectTitle: 'UXO Survey & Aircraft Wreck Location',
+      vessel: 'Geo Ocean III',
+      software: ['Qimera', 'Qinsy', 'AutoClean', 'QGis', 'GlobalMapper','Python'],
+      designation: 'MBES and MAG Data Processor - Offshore: Germany',
+    },
+
+    {
       date: 'Dec/2025',
       client: 'Dieppe Le Tréport - GeoXYZ',
       projectTitle: 'Object Identification Survey 2025 - UXO',
