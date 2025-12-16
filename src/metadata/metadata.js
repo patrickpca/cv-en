@@ -107,6 +107,15 @@ module.exports = {
     
 
     {
+      date: 'Dec/2025',
+      client: 'Dieppe Le Tréport - GeoXYZ',
+      projectTitle: 'Object Identification Survey 2025 - UXO',
+      vessel: 'Geo Ocean III',
+      software: ['Qimera', 'Qinsy', 'AutoClean', 'QGis', 'GlobalMapper','Python'],
+      designation: 'MBES and MAG Data Processor - Offshore: France',
+    },
+  
+    {
       date: 'Ago/2025',
       client: 'TotalEnergies - GeoXYZ',
       projectTitle: 'Offshore UXO Geophysical Site Investigation NSEs',
