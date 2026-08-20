@@ -105,6 +105,23 @@ module.exports = {
 
   experience: [
     
+    {
+      date: 'Jul/2026 - Aug/2026',
+      client: 'bp - GeoXYZ',
+      projectTitle: 'Foinaven Pre-Decommissioning Geophysical Baseline Survey',
+      vessel: 'Geo Ocean III',
+      software: ['Qimera', 'Qinsy', 'Exail Delph INS', 'AutoClean', 'QGis', 'GlobalMapper', 'Python'],
+      designation: 'AUV MBES - Offshore: West of Shetland, UK',
+    },
+
+    {
+      date: 'Apr/2026 - May/2026',
+      client: 'NGET (National Grid Electricity Transmission) - GeoXYZ',
+      projectTitle: 'Sea Link UK (National Grid UXO Survey)',
+      vessel: 'Geo Ocean VI',
+      software: ['Qimera', 'Qinsy', 'AutoClean', 'FMGT', 'QGis', 'GlobalMapper','Python'],
+      designation: 'MBES Data Processor - Offshore: UK',
+    },
 
     {
       date: 'Dec/2025 - Jan/2026',
