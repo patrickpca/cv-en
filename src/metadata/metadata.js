@@ -209,11 +209,11 @@ module.exports = {
     },
 
     {
-      date: 'Jul/2019 - Mar/2021',
-      client: 'IBAMA',
-      projectTitle: 'Shore Approach',
-      vessel: 'Opportunity Vessel - Sem Limites',
-      software: ['Github', 'Python', 'PHP', 'Matlab', 'ArcGis', 'Qgis', 'Autocad', 'Hypack', 'HOBOware', 'Global Mapper', 'Edgetech Discover', 'SignatureWaves', 'Echart', 'Ruskin', 'SeatermV2'],
+      date: 'Oct/2021',
+      client: 'EllaLink',
+      projectTitle: 'Pre cable lay route survey',
+      vessel: 'Opportunity Vessel - Ridley Thomas',
+      software: ['Python','SeatermV2','Ruskin','ITER SYSTEMS BathySwath echosounder','SBG SYSTEMS Ellipse 2 MRU','Teledyne DMS-05 MRU'],
       designation: 'Senior Geoscience Technician',
     },
     {
@@ -225,13 +225,13 @@ module.exports = {
       designation: 'Senior Geoscience Technician',
     },
     {
-      date: 'Oct/2021',
-      client: 'EllaLink',
-      projectTitle: 'Pre cable lay route survey',
-      vessel: 'Opportunity Vessel - Ridley Thomas',
-      software: ['Python','SeatermV2','Ruskin','ITER SYSTEMS BathySwath echosounder','SBG SYSTEMS Ellipse 2 MRU','Teledyne DMS-05 MRU'],
+      date: 'Jul/2019 - Mar/2021',
+      client: 'IBAMA',
+      projectTitle: 'Shore Approach',
+      vessel: 'Opportunity Vessel - Sem Limites',
+      software: ['Github', 'Python', 'PHP', 'Matlab', 'ArcGis', 'Qgis', 'Autocad', 'Hypack', 'HOBOware', 'Global Mapper', 'Edgetech Discover', 'SignatureWaves', 'Echart', 'Ruskin', 'SeatermV2'],
       designation: 'Senior Geoscience Technician',
-    },   
+    },
     {
       date: 'Nov/2020 - Mar/2021',
       client: 'CELSE – Centrais Elétricas de Sergipe S.A',
