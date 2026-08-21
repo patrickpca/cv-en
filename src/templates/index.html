@@ -9,9 +9,11 @@
     <meta property="og:description" content="Oceanographer and hydrographic data processor. MBES, UXO and geophysical survey experience across Europe and Brazil.">
     <meta property="og:type" content="profile">
     <meta property="og:url" content="{{ baseUrl }}">
-    <meta property="og:image" content="{{ baseUrl }}/photo.jpg">
+    <meta property="og:image" content="{{ baseUrl }}/og-card.png">
+    <meta name="twitter:card" content="summary_large_image">
     <title>{{ name }}. {{ title }}</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -259,14 +261,14 @@
           <tbody>
             {{#each experience}}
             <tr>
-              <td>{{ date }}</td>
-              <td>{{ client }}</td>
-              <td>{{ projectTitle }}</td>
-              <td>{{ vessel }}</td>
-              <td>{{#each software }}
+              <td data-label="Date">{{ date }}</td>
+              <td data-label="Client">{{ client }}</td>
+              <td data-label="Project">{{ projectTitle }}</td>
+              <td data-label="Vessel">{{ vessel }}</td>
+              <td data-label="Software">{{#each software }}
                 <span class="badge text-body border border-1">{{ this }}</span>
                 {{/each}}</td>
-              <td>{{ designation }}</td>
+              <td data-label="Designation">{{ designation }}</td>
             </tr>
             {{/each}}
           </tbody>
@@ -291,6 +293,28 @@
                 var dark = root.getAttribute('data-bs-theme') === 'dark';
                 icon.className = dark ? 'fas fa-sun' : 'fas fa-moon';
             }
+        })();
+
+        // Skill bars fill in when scrolled into view (screen only — the
+        // PDF build renders under print media and must keep full widths).
+        (function () {
+            if (window.matchMedia('print').matches) return;
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            if (!('IntersectionObserver' in window)) return;
+            var bars = document.querySelectorAll('.skills-bar');
+            bars.forEach(function (b) {
+                b.dataset.w = b.style.width;
+                b.style.width = '0%';
+            });
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.style.width = e.target.dataset.w;
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.4 });
+            bars.forEach(function (b) { io.observe(b); });
         })();
     </script>
 </body>
