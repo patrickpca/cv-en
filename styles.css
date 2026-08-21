@@ -191,3 +191,383 @@ h1, h2, h3, h4 {
     content: '••••';
     color: var(--bs-primary);
 }
+
+/* ---------------------------------------------------------------
+   Screen-only redesign (bathymetric chart theme).
+   Everything below is scoped to "not print" so the Puppeteer PDF
+   keeps the original layout untouched.
+   --------------------------------------------------------------- */
+:root {
+    --abyss: #0B1B2B;
+    --sounding: #10344E;
+    --swath: #1B7A8C;
+    --shoal: #E3A83C;
+    --chart-paper: #F6F8F9;
+}
+
+@media screen {
+    :root,
+    [data-bs-theme="light"] {
+        --bs-body-bg: var(--chart-paper);
+        --bs-body-font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+        --bs-border-color: #DCE4E9;
+    }
+
+    [data-bs-theme="dark"] {
+        --bs-body-bg: var(--abyss);
+        --bs-body-color: #AEC3CF;
+        --bs-body-color-rgb: 174, 195, 207;
+        --bs-border-color: #22405A;
+        --light-color: #2B4A63;
+    }
+
+    body {
+        font-family: var(--bs-body-font-family);
+    }
+
+    h1, h2, h3, h4 {
+        font-family: 'Archivo', 'Segoe UI', sans-serif;
+        color: var(--abyss);
+    }
+
+    [data-bs-theme="dark"] h1,
+    [data-bs-theme="dark"] h2,
+    [data-bs-theme="dark"] h3,
+    [data-bs-theme="dark"] h4 {
+        color: #ECF4F8;
+    }
+
+    h1 {
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    /* h2 underline drawn as a nautical-chart scale bar */
+    h2 {
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+
+    h2::after {
+        content: '';
+        display: block;
+        width: 84px;
+        height: 7px;
+        margin-top: 0.6rem;
+        border: 1px solid var(--swath);
+        background: repeating-linear-gradient(90deg,
+            var(--swath) 0 20px,
+            transparent 20px 40px);
+    }
+
+    a {
+        color: var(--swath);
+    }
+
+    a:hover {
+        color: var(--shoal);
+    }
+
+    .border-dark {
+        border-color: var(--bs-border-color) !important;
+    }
+
+    /* Hero with isobath contours behind the header */
+    .hero {
+        position: relative;
+        overflow: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .contour-art {
+        position: absolute;
+        right: -6rem;
+        top: -4rem;
+        width: min(58vw, 620px);
+        color: #135E70;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    [data-bs-theme="dark"] .contour-art {
+        color: var(--swath);
+        opacity: 0.22;
+    }
+
+    /* GNSS satellite beside the name, transmitting toward the vessel */
+    .page {
+        position: relative;
+    }
+
+    .sat-art {
+        position: absolute;
+        left: -4rem;
+        top: 0.75rem;
+        width: 96px;
+        color: #135E70;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    [data-bs-theme="dark"] .sat-art {
+        color: var(--swath);
+        opacity: 0.26;
+    }
+
+    @media (max-width: 991.98px) {
+        .sat-art {
+            display: none;
+        }
+    }
+
+    .sat-float {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: sat-orbit 14s linear infinite;
+    }
+
+    /* radio ripples: thin half-circumference arcs expanding from the
+       satellite until they reach the vessel */
+    .signal-art {
+        position: absolute;
+        left: -4rem;
+        top: 0.75rem;
+        width: 1300px;
+        color: #135E70;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    [data-bs-theme="dark"] .signal-art {
+        color: var(--swath);
+        opacity: 0.26;
+    }
+
+    @media (max-width: 991.98px) {
+        .signal-art {
+            display: none;
+        }
+    }
+
+    .signal-ripple {
+        transform-box: view-box;
+        animation: signal-ripple 7s linear infinite;
+    }
+
+    .signal-ripple:nth-child(2) { animation-delay: -1.75s; }
+    .signal-ripple:nth-child(3) { animation-delay: -3.5s; }
+    .signal-ripple:nth-child(4) { animation-delay: -5.25s; }
+
+    @keyframes signal-ripple {
+        0%   { transform: scale(0.04); opacity: 0.9; }
+        70%  { opacity: 0.4; }
+        100% { transform: scale(1); opacity: 0; }
+    }
+
+    /* circular orbit: rotate out, hold radius, counter-rotate to keep
+       the satellite upright while it travels the circle */
+    @keyframes sat-orbit {
+        from { transform: rotate(0deg) translateX(18px) rotate(0deg); }
+        to   { transform: rotate(360deg) translateX(18px) rotate(-360deg); }
+    }
+
+
+    /* Survey vessel running lines across the header, MBES swath pinging */
+    .vessel {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: survey-run 56s linear infinite;
+    }
+
+    .vessel-bob {
+        animation: vessel-bob 5s ease-in-out infinite;
+    }
+
+    .swath-beams {
+        animation: swath-ping 2.6s linear infinite;
+    }
+
+    .sea-wave {
+        animation: sea-drift 7s linear infinite;
+    }
+
+    @keyframes sea-drift {
+        to { transform: translateX(-32px); }
+    }
+
+    @keyframes survey-run {
+        0%   { transform: translateX(20px) scaleX(1); }
+        48%  { transform: translateX(430px) scaleX(1); }
+        52%  { transform: translateX(430px) scaleX(-1); }
+        98%  { transform: translateX(20px) scaleX(-1); }
+        100% { transform: translateX(20px) scaleX(1); }
+    }
+
+    @keyframes vessel-bob {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(3px); }
+    }
+
+    @keyframes swath-ping {
+        to { stroke-dashoffset: -18; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .vessel,
+        .vessel-bob,
+        .swath-beams,
+        .sea-wave,
+        .sat-float,
+        .signal-ripple {
+            animation: none;
+        }
+    }
+
+    .hero .row {
+        position: relative;
+    }
+
+    .hero img.rounded-circle {
+        outline: 3px solid var(--swath);
+        outline-offset: 4px;
+    }
+
+    .hero .list-group-item {
+        background: transparent;
+    }
+
+    /* Data set in survey-log mono */
+    .badge {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0;
+        border-color: rgba(27, 122, 140, 0.45) !important;
+        background: rgba(27, 122, 140, 0.07);
+        border-radius: 0.2rem;
+    }
+
+    .table thead th {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.78rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--swath);
+        border-bottom: 2px solid var(--swath);
+    }
+
+    .table td:first-child {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
+    .table td:nth-child(2) {
+        font-weight: 600;
+    }
+
+    .table tbody tr:hover {
+        background: rgba(27, 122, 140, 0.06);
+    }
+
+    /* Skills: dotted meter becomes a depth-gradient bar */
+    .skills {
+        width: 100%;
+        height: 7px;
+        background: var(--light-color);
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .skills::after {
+        content: none;
+    }
+
+    .skills-bar {
+        height: 100%;
+        background: linear-gradient(90deg, var(--swath), var(--shoal));
+        border-radius: 4px;
+        transition: width 1.1s ease-out;
+    }
+
+    .skills-bar::after {
+        content: none;
+    }
+
+    .theme-toggle {
+        width: 2.8rem;
+        height: 2.8rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--swath);
+        background: var(--bs-body-bg);
+        box-shadow: 0 2px 10px rgba(11, 27, 43, 0.18);
+    }
+
+    .theme-toggle .fas {
+        margin-right: 0;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+        font-family: 'IBM Plex Mono', Consolas, monospace;
+        font-size: 0.92rem;
+        color: inherit;
+    }
+
+    /* Projects table becomes stacked cards on small screens */
+    @media (max-width: 767.98px) {
+        .table thead {
+            display: none;
+        }
+
+        .table,
+        .table tbody,
+        .table tr,
+        .table td {
+            display: block;
+            width: 100%;
+        }
+
+        .table tr {
+            border: 1px solid var(--bs-border-color);
+            border-left: 3px solid var(--swath);
+            border-radius: 0.4rem;
+            margin-bottom: 1rem;
+            padding: 0.9rem 1rem;
+            background: rgba(27, 122, 140, 0.04);
+        }
+
+        .table td {
+            border: 0;
+            padding: 0.3rem 0;
+            white-space: normal;
+        }
+
+        .table td::before {
+            content: attr(data-label);
+            display: block;
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 0.68rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--swath);
+        }
+
+        .table td:first-child {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+    }
+
+    :focus-visible {
+        outline: 2px solid var(--shoal);
+        outline-offset: 2px;
+    }
+}
