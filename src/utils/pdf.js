@@ -3,6 +3,9 @@ const Puppeteer = require('puppeteer');
 module.exports = async function buildPdf(inputFile, outputFile) {
   const browser = await Puppeteer.launch();
   const page = await browser.newPage();
+  // Load the page in print media so print-only fonts (Roboto) are
+  // fetched before rendering the PDF.
+  await page.emulateMediaType('print');
   await page.goto(`file://${inputFile}`, {
     waitUntil: 'networkidle0'
   });
