@@ -4,6 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ name }} — Oceanographer and hydrographic data processor. MBES, UXO and geophysical survey experience across Europe and Brazil.">
+    <meta property="og:title" content="{{ name }} — {{ title }}">
+    <meta property="og:description" content="Oceanographer and hydrographic data processor. MBES, UXO and geophysical survey experience across Europe and Brazil.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="{{ baseUrl }}">
+    <meta property="og:image" content="{{ baseUrl }}/photo.jpg">
     <title>{{ name }}. {{ title }}</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -67,19 +73,17 @@
 
         <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
             <h2 class="mb-4">Resume</h2>
-            As an Oceanographer with additional training in Cyber Defense from FIAP, I have specialized 
-            in the intersection between ocean science and data technology, with a focus on the 
-            acquisition, processing, and analysis of oceanographic data through advanced methods. 
-            My experience ranges from the use of bathymetric technologies and GIS analysis to the 
-            application of precise positioning systems, such as RTK and DGPS, in hydrographic and 
-            geophysical service projects. I possess solid skills in handling environmental data, 
-            such as ADCP, CTD profiles, dissolved oxygen, as well as data on waves, currents, 
-            sea levels, and meteorology. My proficiency in Python programming, enhanced by knowledge 
-            in data analysis and cybersecurity, allows for the development of efficient routines for 
-            processing and presenting oceanographic data. Experience in cybersecurity complements my 
-            analytical capability, bringing a rigorous approach to the protection, analysis, and management
-             of sensitive data, essential for the integrity and security of oceanographic projects.
-            
+            <ul class="mb-0">
+                <li class="mb-2">Oceanographer specialized in acquisition, processing and analysis of hydrographic
+                    and geophysical data — MBES bathymetry, backscatter, magnetometry, ADCP, CTD, waves, currents
+                    and tides.</li>
+                <li class="mb-2">Offshore and remote experience in UXO, cable-route, windfarm and decommissioning
+                    surveys across Europe and Brazil, using RTK/DGPS precise positioning.</li>
+                <li class="mb-2">Advanced Python for data-processing automation, reporting and multisource
+                    integration, combined with GIS analysis (QGis, ArcGis, Global Mapper).</li>
+                <li class="mb-2">Additional training in Cyber Defense (FIAP), bringing a rigorous approach to the
+                    protection and management of sensitive project data.</li>
+            </ul>
         </div>
 
         <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
@@ -146,7 +150,7 @@
         </div> -->
 
         <div class="border-bottom border-2 border-print-0 border-dark mb-5 pb-5 pb-print-0 mb-print-1">
-            <h2 class="mb-4">Experience</h2>
+            <h2 class="mb-4">Areas of Expertise</h2>
             {{#each positions2}}
             <div class="row d-block d-md-flex{{#unless @last}} mb-5{{/unless}}">
                 <div class="col-md-2 pt-1">
@@ -204,6 +208,7 @@
 
         <h2 class="mb-4">Projects</h2>
 
+        <div class="table-responsive">
         <table class="table">
           <thead>
             <tr>
@@ -230,8 +235,9 @@
             {{/each}}
           </tbody>
         </table>
-        
-        
+        </div>
+
+
     </div>
     <script>
         (function () {
