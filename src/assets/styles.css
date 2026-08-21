@@ -7,6 +7,12 @@
     --bs-body-font-size: 1.2rem;
 }
 
+[data-bs-theme="dark"] {
+    --bs-body-color: #b8b8b8;
+    --bs-body-color-rgb: 184, 184, 184;
+    --light-color: #4d4d4d;
+}
+
 a {
     word-break: break-word;
     text-decoration: none;
@@ -16,9 +22,37 @@ h1, h2, h3, h4 {
     color: #000000;
 }
 
+[data-bs-theme="dark"] h1,
+[data-bs-theme="dark"] h2,
+[data-bs-theme="dark"] h3,
+[data-bs-theme="dark"] h4 {
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .border-dark {
+    border-color: #495057 !important;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
 @media print {
-    :root {
+    :root,
+    [data-bs-theme="dark"] {
         --bs-body-color: #000;
+        --bs-body-bg: #fff;
+        --light-color: #D9D9D9;
+    }
+
+    [data-bs-theme="dark"] h1,
+    [data-bs-theme="dark"] h2,
+    [data-bs-theme="dark"] h3,
+    [data-bs-theme="dark"] h4 {
+        color: #000000;
     }
 
     body {
