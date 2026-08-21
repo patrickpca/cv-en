@@ -308,6 +308,14 @@ h1, h2, h3, h4 {
         animation: swath-ping 2.6s linear infinite;
     }
 
+    .sea-wave {
+        animation: sea-drift 7s linear infinite;
+    }
+
+    @keyframes sea-drift {
+        to { transform: translateX(-32px); }
+    }
+
     @keyframes survey-run {
         0%   { transform: translateX(20px) scaleX(1); }
         48%  { transform: translateX(430px) scaleX(1); }
@@ -328,7 +336,8 @@ h1, h2, h3, h4 {
     @media (prefers-reduced-motion: reduce) {
         .vessel,
         .vessel-bob,
-        .swath-beams {
+        .swath-beams,
+        .sea-wave {
             animation: none;
         }
     }
