@@ -279,18 +279,66 @@ h1, h2, h3, h4 {
         overflow: hidden;
     }
 
+    body {
+        overflow-x: hidden;
+    }
+
     .contour-art {
         position: absolute;
         right: -6rem;
         top: -4rem;
         width: min(58vw, 620px);
-        color: var(--swath);
-        opacity: 0.16;
+        color: #135E70;
+        opacity: 0.3;
         pointer-events: none;
     }
 
     [data-bs-theme="dark"] .contour-art {
+        color: var(--swath);
         opacity: 0.22;
+    }
+
+    /* GNSS satellite beside the name, transmitting toward the vessel */
+    .page {
+        position: relative;
+    }
+
+    .sat-art {
+        position: absolute;
+        left: -4rem;
+        top: 0.75rem;
+        width: 96px;
+        color: #135E70;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    [data-bs-theme="dark"] .sat-art {
+        color: var(--swath);
+        opacity: 0.26;
+    }
+
+    @media (max-width: 991.98px) {
+        .sat-art {
+            display: none;
+        }
+    }
+
+    .sat-float {
+        animation: sat-float 9s ease-in-out infinite alternate;
+    }
+
+    .sat-signal {
+        animation: sat-signal 2.8s linear infinite;
+    }
+
+    @keyframes sat-float {
+        from { transform: translate(0, 0); }
+        to   { transform: translate(7px, 9px); }
+    }
+
+    @keyframes sat-signal {
+        to { stroke-dashoffset: -20; }
     }
 
     /* Survey vessel running lines across the header, MBES swath pinging */
@@ -337,7 +385,9 @@ h1, h2, h3, h4 {
         .vessel,
         .vessel-bob,
         .swath-beams,
-        .sea-wave {
+        .sea-wave,
+        .sat-float,
+        .sat-signal {
             animation: none;
         }
     }
