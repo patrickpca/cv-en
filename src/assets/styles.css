@@ -330,8 +330,42 @@ h1, h2, h3, h4 {
         animation: sat-orbit 14s linear infinite;
     }
 
-    .sat-signal {
-        animation: sat-signal 2.8s linear infinite;
+    /* radio ripples: thin half-circumference arcs expanding from the
+       satellite until they reach the vessel */
+    .signal-art {
+        position: absolute;
+        left: -4rem;
+        top: 0.75rem;
+        width: 1300px;
+        color: #135E70;
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    [data-bs-theme="dark"] .signal-art {
+        color: var(--swath);
+        opacity: 0.26;
+    }
+
+    @media (max-width: 991.98px) {
+        .signal-art {
+            display: none;
+        }
+    }
+
+    .signal-ripple {
+        transform-box: view-box;
+        animation: signal-ripple 7s linear infinite;
+    }
+
+    .signal-ripple:nth-child(2) { animation-delay: -1.75s; }
+    .signal-ripple:nth-child(3) { animation-delay: -3.5s; }
+    .signal-ripple:nth-child(4) { animation-delay: -5.25s; }
+
+    @keyframes signal-ripple {
+        0%   { transform: scale(0.04); opacity: 0.9; }
+        70%  { opacity: 0.4; }
+        100% { transform: scale(1); opacity: 0; }
     }
 
     /* circular orbit: rotate out, hold radius, counter-rotate to keep
@@ -341,9 +375,6 @@ h1, h2, h3, h4 {
         to   { transform: rotate(360deg) translateX(18px) rotate(-360deg); }
     }
 
-    @keyframes sat-signal {
-        to { stroke-dashoffset: -20; }
-    }
 
     /* Survey vessel running lines across the header, MBES swath pinging */
     .vessel {
@@ -391,7 +422,7 @@ h1, h2, h3, h4 {
         .swath-beams,
         .sea-wave,
         .sat-float,
-        .sat-signal {
+        .signal-ripple {
             animation: none;
         }
     }
