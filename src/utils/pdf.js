@@ -12,7 +12,6 @@ module.exports = async function buildPdf(inputFile, outputFile) {
   await page.pdf({
     path: outputFile,
     format: 'A4',
-    border: 0,
     margin: {
       top: '2.54cm',
       right: '2.54cm',
