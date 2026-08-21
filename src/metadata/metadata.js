@@ -7,7 +7,7 @@ module.exports = {
                   <i class="fab fa-linkedin-in"></i>Patrick-Coser
                 </a>`,
     'Github': `<a href="https://github.com/patrickpca"><i class="fa-brands fa-github"></i>Patrickpca</a>`,
-    'Email': '<a href="patrickpcaa@gmail.com"><i class="fa fa-envelope fact-icon"></i>patrickpcaa@gmail.com</a>'
+    'Email': '<a href="mailto:patrickpcaa@gmail.com"><i class="fa fa-envelope fact-icon"></i>patrickpcaa@gmail.com</a>'
   },
   skills: [
     ['Data Analysis', 100],
@@ -35,7 +35,7 @@ module.exports = {
       - MBES processing through the softwares: QPS Qimera and FMGT, EIVA NaviEdit and Navimodel, Beamworx AutoClean
       and AutoPatch. Data validation, calibration, backscatter, quality control, deliverables production. 
       
-      - Multisource Data Integration: Combining bathymetric data with other geospatial data sources and phyton 
+      - Multisource Data Integration: Combining bathymetric data with other geospatial data sources and Python
       for comprehensive analysis.
 `
     },
@@ -142,7 +142,7 @@ module.exports = {
     },
   
     {
-      date: 'Ago/2025',
+      date: 'Aug/2025',
       client: 'TotalEnergies - GeoXYZ',
       projectTitle: 'Offshore UXO Geophysical Site Investigation NSEs',
       vessel: 'Geo Ocean VIII',
@@ -175,7 +175,7 @@ module.exports = {
       designation: 'MBES Data Processor - Offshore: France',
     },
     {
-      date: 'Aug/2024 - Out/2024',
+      date: 'Aug/2024 - Oct/2024',
       client: 'RTE - GeoXYZ',
       projectTitle: 'RTE Off Coast Atlantic',
       vessel: 'MinervaUno / Geo Ocean XXII',
@@ -191,7 +191,7 @@ module.exports = {
       designation: 'MBES Data Processor - Remote',
     },
     {
-      date: 'Jan/2024 - Fev/2024',
+      date: 'Jan/2024 - Feb/2024',
       client: 'EGS',
       projectTitle: 'EGS UK - Sunderland',
       vessel: 'Opportunity Vessel',
@@ -241,7 +241,7 @@ module.exports = {
       designation: 'Senior Geoscience Technician II',
     },
     {
-      date: 'Aug/2019 - Dez/2019',
+      date: 'Aug/2019 - Dec/2019',
       client: 'Alcatel Submarine Network - ASN',
       projectTitle: 'Malbec Submarine Cable - Cable route survey in Rio de Janeiro and Santos - Brasil',
       vessel: 'Opportunity Vessel',
@@ -259,7 +259,7 @@ module.exports = {
     {
       date: 'Aug/2018 - Jan/2019',
       client: 'Rede Nacional de Ensino e Pesquisa (RNP)',
-      projectTitle: 'Hydrographic and Geophysical Survey - Grande do Norte and Fernando de Noronha Archipelago (PE)',
+      projectTitle: 'Hydrographic and Geophysical Survey - Rio Grande do Norte and Fernando de Noronha Archipelago (PE)',
       vessel: 'Opportunity Vessel - Gaivota',
       software: ['Hypack','Python','QGIS','Global Mapper'],
       designation: 'Hydrography Technical Assistant III',
