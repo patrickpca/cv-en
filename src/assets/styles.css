@@ -325,16 +325,20 @@ h1, h2, h3, h4 {
     }
 
     .sat-float {
-        animation: sat-float 9s ease-in-out infinite alternate;
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: sat-orbit 14s linear infinite;
     }
 
     .sat-signal {
         animation: sat-signal 2.8s linear infinite;
     }
 
-    @keyframes sat-float {
-        from { transform: translate(0, 0); }
-        to   { transform: translate(7px, 9px); }
+    /* circular orbit: rotate out, hold radius, counter-rotate to keep
+       the satellite upright while it travels the circle */
+    @keyframes sat-orbit {
+        from { transform: rotate(0deg) translateX(18px) rotate(0deg); }
+        to   { transform: rotate(360deg) translateX(18px) rotate(-360deg); }
     }
 
     @keyframes sat-signal {
