@@ -16,7 +16,7 @@ module.exports = {
     ['Qimera', 90],
     ['AutoClean', 90],
     ['QGis', 90],
-    ['GlobalMapper', 85],
+    ['Global Mapper', 85],
     ['FMGT', 85],
     ['ArcGis', 85],
     ['EIVA', 70],
