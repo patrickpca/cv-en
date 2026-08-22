@@ -48,6 +48,12 @@ h1, h2, h3, h4 {
         --light-color: #D9D9D9;
     }
 
+    /* embed the same mono face on every build platform */
+    pre,
+    code {
+        font-family: 'IBM Plex Mono', Consolas, monospace;
+    }
+
     [data-bs-theme="dark"] h1,
     [data-bs-theme="dark"] h2,
     [data-bs-theme="dark"] h3,
