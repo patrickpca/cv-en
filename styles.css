@@ -61,6 +61,18 @@ h1, h2, h3, h4 {
         page-break-inside: avoid;
     }
 
+    /* headings stay with the content that follows */
+    h2, h3 {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    /* Projects always opens a fresh page with its table */
+    .projects-heading {
+        break-before: page;
+        page-break-before: always;
+    }
+
     [data-bs-theme="dark"] h1,
     [data-bs-theme="dark"] h2,
     [data-bs-theme="dark"] h3,
