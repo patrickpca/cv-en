@@ -54,6 +54,13 @@ h1, h2, h3, h4 {
         font-family: 'IBM Plex Mono', Consolas, monospace;
     }
 
+    /* keep each position block and table row on a single page */
+    .row,
+    tr {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
     [data-bs-theme="dark"] h1,
     [data-bs-theme="dark"] h2,
     [data-bs-theme="dark"] h3,
