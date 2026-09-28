@@ -106,7 +106,7 @@ module.exports = {
   experience: [
     
     {
-      date: 'Jul/2026 - Aug/2026',
+      date: 'Jul/2026 - Set/2026',
       client: 'bp - GeoXYZ',
       projectTitle: 'Foinaven Pre-Decommissioning Geophysical Baseline Survey',
       vessel: 'Geo Ocean III',
